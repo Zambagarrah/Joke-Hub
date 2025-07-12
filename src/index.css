@@ -1,0 +1,30 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
