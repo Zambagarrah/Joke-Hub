@@ -7,17 +7,12 @@ type JokeDisplayProps = {
 };
 
 const JokeDisplay: React.FC<JokeDisplayProps> = ({ category }) => {
-  // State to hold the current joke
   const [joke, setJoke] = useState('');
-  // Spinner & error messages
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  // List of favorites
   const [favorites, setFavorites] = useState<string[]>([]);
-  // Used to re-trigger joke fetch
   const [reload, setReload] = useState(false);
 
-  // Load favorites from localStorage on mount
   useEffect(() => {
     const saved = localStorage.getItem('favorites');
     if (saved) {
@@ -25,7 +20,6 @@ const JokeDisplay: React.FC<JokeDisplayProps> = ({ category }) => {
     }
   }, []);
 
-  // Fetch joke on category change or reload trigger
   useEffect(() => {
     const fetchJoke = async () => {
       setLoading(true);
@@ -33,7 +27,6 @@ const JokeDisplay: React.FC<JokeDisplayProps> = ({ category }) => {
       setJoke('');
 
       try {
-        // Dedicated endpoint for Dad jokes
         if (category === 'Dad') {
           const res = await fetch('https://icanhazdadjoke.com/', {
             headers: { Accept: 'application/json' }
@@ -41,7 +34,6 @@ const JokeDisplay: React.FC<JokeDisplayProps> = ({ category }) => {
           const data = await res.json();
           setJoke(data.joke);
         } else {
-          // Use JokeAPI for other categories
           const res = await fetch(`https://v2.jokeapi.dev/joke/${category}?type=single`);
           const data = await res.json();
           if (data && data.joke) {
@@ -60,7 +52,6 @@ const JokeDisplay: React.FC<JokeDisplayProps> = ({ category }) => {
     fetchJoke();
   }, [category, reload]);
 
-  // Toggle joke in favorites
   const handleFavoriteToggle = () => {
     let updatedFavorites;
     if (favorites.includes(joke)) {
@@ -73,32 +64,47 @@ const JokeDisplay: React.FC<JokeDisplayProps> = ({ category }) => {
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
 
-  // Is current joke favorited?
   const isFavorite = favorites.includes(joke);
-
-  // Trigger joke refresh
   const handleNextJoke = () => setReload(prev => !prev);
+
+  // Emoji & background styles per category
+  const categoryStyles: Record<string, { emoji: string }> = {
+    Dark: { emoji: '😈' },
+    Dad: { emoji: '👨‍🦳' },
+    Pun: { emoji: '🧠' },
+    Programming: { emoji: '💻' },
+    Misc: { emoji: '🎲' },
+  };
+
+  const currentStyle = categoryStyles[category] || { emoji: '🤡', bg: '#ffffff' };
 
   return (
     <div className="mt-4">
-      {/* Spinner */}
       {loading && <div className="spinner-border text-primary" role="status" />}
-
-      {/* Error message */}
       {error && <p className="text-danger mt-2">{error}</p>}
 
-      {/* Joke card display */}
       {joke && (
         <div
           className="card mx-auto shadow-sm"
           style={{
             maxWidth: '600px',
             borderRadius: '12px',
-            backgroundColor: '#fff',
           }}
         >
           <div className="card-body">
-            {/* Joke content */}
+            {/* Category Header with emoji */}
+            <h5
+              className="emoji-header"
+              style={{
+                fontWeight: 'bold',
+                marginBottom: '1rem',
+                fontSize: '1.4rem'
+              }}
+            >
+              {currentStyle.emoji} {category} Joke
+            </h5>
+
+            {/* Joke text */}
             <p
               className="card-text"
               style={{
@@ -110,7 +116,7 @@ const JokeDisplay: React.FC<JokeDisplayProps> = ({ category }) => {
               {joke}
             </p>
 
-            {/* Actions: favorite, share, next */}
+            {/* Action buttons */}
             <div className="d-flex flex-column align-items-center gap-2">
               <FavoriteButton joke={joke} isFavorite={isFavorite} onToggle={handleFavoriteToggle} />
               <ShareButton joke={joke} />

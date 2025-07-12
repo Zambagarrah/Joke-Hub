@@ -28,3 +28,32 @@ body {
   background-color: #17a2b8;
   border: none;
 }
+
+/* Smooth transitions for all interactive items */
+.card, .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Joke card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+.btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Category emoji bounce effect */
+.emoji-header:hover {
+  animation: bounce 0.6s;
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+

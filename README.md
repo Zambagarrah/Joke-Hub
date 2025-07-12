@@ -1,69 +1,65 @@
-# React + TypeScript + Vite
+# 😂 JokeHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JokeHub** is a fast, responsive, and ridiculously fun web app that delivers jokes across five popular categories — including Dad Jokes, Dark Humor, Puns, Programming gags, and more. Built with React + TypeScript + Vite, it’s a showcase of playful UI, API integration, and good developer vibes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- 🎭 Browse jokes by category: **Dark**, **Dad**, **Pun**, **Programming**, **Misc**
+- ⚡ Instant joke fetching using:
+  - [JokeAPI](https://jokeapi.dev/)
+  - [icanhazdadjoke.com](https://icanhazdadjoke.com/)
+- 💾 Save favorite jokes to your local collection
+- 🔁 Tap into unlimited laughter with the "Next Joke" button
+- 📤 Share jokes using Web Share API or clipboard copy
+- 💅 Smooth hover effects and emoji-based category styling
+- 💻 Fully responsive design powered by Bootstrap
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📸 Preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+> _(Add a screenshot of the app here once deployed or include your logo)_
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🧱 Tech Stack
+
+| Tool | Usage |
+|------|-------|
+| React + TypeScript | Core frontend logic |
+| Vite | Lightning-fast build setup |
+| Bootstrap | Responsive styling |
+| JokeAPI & Dad Joke API | Joke content sourcing |
+| localStorage | Persistent favorites |
+
+---
+
+## 🚀 Installation
+
+> Recommended: [Node.js](https://nodejs.org/) + [Yarn](https://yarnpkg.com/) installed
+
+
+```
+git clone https://github.com/Zambagarrah/Joke-Hub.git # Clone the repo
+cd Joke-Hub 
+yarn install # Install Dependencies
+yarn dev # Start the dev server
+```
+Then head to `http://localhost:5173` and start laughing.
+
+## 🧃 Contributing
+Want to add your own category? 
+Improve the UI? 
+Toss in joke ratings or analytics? 
+Pull requests are welcome!
+
+```
+# Create a new feature branch
+git checkout -b feat/my-awesome-idea
+
+# Make your changes, then push
+git push origin feat/my-awesome-idea
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
