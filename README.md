@@ -1,6 +1,6 @@
 # 😂 JokeHub
 
-**JokeHub** is a fast, responsive, and ridiculously fun web app that delivers jokes across five popular categories — including Dad Jokes, Dark Humor, Puns, Programming gags, and more. Built with React + TypeScript + Vite, it’s a showcase of playful UI, API integration, and good developer vibes.
+**JokeHub** is a playful, responsive React + TypeScript app that delivers hilariously curated jokes across dark humor, dad jokes, puns, and programming laughs — complete with favorites, sharing, and stylish punchline delivery.
 
 ---
 
@@ -20,7 +20,7 @@
 
 ## 📸 Preview
 
-> _(Add a screenshot of the app here once deployed or include your logo)_
+![Main-Page](./assets/home-page.png)
 
 ---
 
