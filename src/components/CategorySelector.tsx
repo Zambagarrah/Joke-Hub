@@ -1,5 +1,3 @@
-import React from 'react';
-
 type CategorySelectorProps = {
   selected: string; // Current selected category
   onSelect: (category: string) => void; // Callback to update selection

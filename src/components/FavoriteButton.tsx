@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Props: joke text and whether it's currently favorited
 type FavoriteButtonProps = {

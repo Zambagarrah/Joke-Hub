@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CategorySelector from './components/CategorySelector';
@@ -12,7 +12,7 @@ function App() {
     <Router>
       {/* Full screen centered wrapper */}
       <div
-        className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light px-3"
+        className="d-flex flex-column justify-content-center align-items-center vh-100 px-3"
         style={{ textAlign: 'center' }}
       >
         {/* Fixed max width wrapper to keep content centered */}
