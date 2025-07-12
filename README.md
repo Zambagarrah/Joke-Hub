@@ -42,10 +42,10 @@
 
 
 ```
-git clone https://github.com/Zambagarrah/Joke-Hub.git #Clone the repo
+git clone https://github.com/Zambagarrah/Joke-Hub.git 
 cd Joke-Hub 
-yarn install #Install Dependencies
-yarn dev #Start the dev server
+yarn install 
+yarn dev 
 ```
 Then head to `http://localhost:5173` and start laughing.
 
