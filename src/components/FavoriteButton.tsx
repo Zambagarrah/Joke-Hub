@@ -6,7 +6,7 @@ type FavoriteButtonProps = {
   onToggle: () => void;
 };
 
-const FavoriteButton: React.FC<FavoriteButtonProps> = ({ joke, isFavorite, onToggle }) => {
+const FavoriteButton: React.FC<FavoriteButtonProps> = ({ isFavorite, onToggle }) => {
   return (
     <button className={`btn btn-${isFavorite ? 'danger' : 'success'} mt-2`} onClick={onToggle}>
       {isFavorite ? '💔 Remove Favorite' : '💖 Add to Favorites'}
