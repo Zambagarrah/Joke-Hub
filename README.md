@@ -1,6 +1,6 @@
 # JokeHub
 
-**JokeHub** is a playful, responsive React + TypeScript app that delivers hilariously curated jokes across dark humor, dad jokes, puns, and programming laughs — complete with favorites, sharing, and stylish punchline delivery.
+**JokeHub** is a playful, responsive React + TypeScript app that delivers hilariously curated jokes across dark humor, dad jokes, puns, and programming laughs, complete with favorites, sharing, and stylish punchline delivery.
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## Installation
 
-> Recommended: [Node.js](https://nodejs.org/) + [Yarn](https://yarnpkg.com/) installed
+> Recommended: [Node.js](https://nodejs.org/) + [Yarn](https://yarnpkg.com/) installed.
 
 
 ```
