@@ -1,30 +1,30 @@
-# 😂 JokeHub
+# JokeHub
 
 **JokeHub** is a playful, responsive React + TypeScript app that delivers hilariously curated jokes across dark humor, dad jokes, puns, and programming laughs — complete with favorites, sharing, and stylish punchline delivery.
 
 ---
 
-## 🌟 Features
+## Features
 
-- 🎭 Browse jokes by category: **Dark**, **Dad**, **Pun**, **Programming**, **Misc**
-- ⚡ Instant joke fetching using:
+- Browse jokes by category: **Dark**, **Dad**, **Pun**, **Programming**, **Misc**
+- Instant joke fetching using:
   - [JokeAPI](https://jokeapi.dev/)
   - [icanhazdadjoke.com](https://icanhazdadjoke.com/)
-- 💾 Save favorite jokes to your local collection
-- 🔁 Tap into unlimited laughter with the "Next Joke" button
-- 📤 Share jokes using Web Share API or clipboard copy
-- 💅 Smooth hover effects and emoji-based category styling
-- 💻 Fully responsive design powered by Bootstrap
+- Save favorite jokes to your local collection
+- Tap into unlimited laughter with the "Next Joke" button
+- Share jokes using Web Share API or clipboard copy
+- Smooth hover effects and emoji-based category styling
+- Fully responsive design powered by Bootstrap
 
 ---
 
-## 📸 Preview
+## Preview
 
 ![Main-Page](./assets/home-page.png)
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 | Tool | Usage |
 |------|-------|
@@ -36,7 +36,7 @@
 
 ---
 
-## 🚀 Installation
+## Installation
 
 > Recommended: [Node.js](https://nodejs.org/) + [Yarn](https://yarnpkg.com/) installed
 
@@ -49,7 +49,7 @@ yarn dev
 ```
 Then head to `http://localhost:5173` and start laughing.
 
-## 🧃 Contributing
+## Contributing
 Want to add your own category? 
 Improve the UI? 
 Toss in joke ratings or analytics? 
