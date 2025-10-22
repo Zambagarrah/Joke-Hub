@@ -4,7 +4,7 @@
 
 ---
 
-## Features
+## Features.
 
 - Browse jokes by category: **Dark**, **Dad**, **Pun**, **Programming**, **Misc**
 - Instant joke fetching using:
